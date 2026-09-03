@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Г.Булгантамир ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@300;400;500;600&display=swap');
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#090909;color:#fff;font-family:Montserrat,sans-serif;overflow-x:hidden}
+section{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:70px 22px;position:relative}
+.hero{min-height:100vh;text-align:center;background:
+radial-gradient(circle at 50% 35%,rgba(255,170,190,.15),transparent 35%),
+linear-gradient(180deg,#090909,#160c11)}
+.hero h1{font-family:"DM Serif Display",serif;font-size:clamp(55px,12vw,125px);font-weight:400;margin:10px 0;letter-spacing:-3px}
+.hero p{font-size:13px;letter-spacing:5px;text-transform:uppercase;color:#d9bfc6}
+.heart{font-size:35px;animation:pulse 1.7s infinite}
+@keyframes pulse{50%{transform:scale(1.18)}}
+.enter{margin-top:35px;padding:15px 28px;border:1px solid #8d6570;border-radius:40px;background:transparent;color:#fff;cursor:pointer;letter-spacing:2px}
+.music{position:fixed;right:18px;top:18px;z-index:10;border:1px solid #60434d;background:rgba(10,10,10,.72);backdrop-filter:blur(10px);padding:10px 14px;border-radius:30px;font-size:12px;cursor:pointer;color:white}
+.wrap{max-width:1050px;width:100%;margin:auto}
+.title{font-family:"DM Serif Display",serif;font-size:clamp(40px,7vw,70px);font-weight:400;text-align:center;margin:0 0 14px}
+.sub{text-align:center;color:#bcaeb2;line-height:1.8;max-width:650px;margin:0 auto 45px}
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.photo{overflow:hidden;border-radius:22px;background:#181818}
+.photo img{width:100%;height:600px;object-fit:cover;display:block;transition:transform .7s}
+.photo:hover img{transform:scale(1.04)}
+.card{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);border-radius:24px;padding:34px;line-height:2;max-width:760px;margin:auto}
+.poem{font-family:"DM Serif Display",serif;font-size:25px;line-height:1.9;text-align:center;color:#f4e7ea}
+.days{text-align:center}
+.number{font-family:"DM Serif Display",serif;font-size:clamp(80px,18vw,180px);line-height:.9}
+.label{letter-spacing:6px;text-transform:uppercase;color:#aa9199;font-size:12px}
+.funny-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.funny{padding:25px;border-radius:20px;background:#171114;border:1px solid #34242a;cursor:pointer;transition:.25s;text-align:center}
+.funny:hover{transform:translateY(-5px);border-color:#76535e}
+.answer{display:none;color:#e5cbd2;margin-top:14px;font-size:13px;line-height:1.7}
+.final{background:radial-gradient(circle,#261119,#090909);text-align:center}
+.final h2{font-family:"DM Serif Display",serif;font-size:clamp(50px,10vw,100px);font-weight:400;margin:15px 0}
+.final p{color:#c8b5bb;max-width:600px;margin:auto;line-height:2}
+.footer{padding:30px;text-align:center;color:#62565a;font-size:11px}
+@media(max-width:700px){
+.photos,.funny-grid{grid-template-columns:1fr}
+.photo img{height:520px}
+.card{padding:24px}
+}
+</style>
+</head>
+<body>
+
+<audio id="song" loop>
+  <source src="when-the-sun-hits.mp3" type="audio/mpeg">
+</audio>
+<button class="music" id="musicBtn" onclick="toggleMusic()">♫ <span id="musicText">PLAY</span></button>
+
+<section class="hero" id="top">
+  <div>
+    <div class="heart">♡</div>
+    <p>Хайрдаа төрсөн өдөрийн мэнд хүргэе</p>
+    <h1>Г.Булгантамир</h1>
+    <p>508 хоногийн дурсамж</p>
+    <button class="enter" onclick="startExperience()">НЭЭХ ↓</button>
+  </div>
+</section>
+
+<section id="story">
+<div class="wrap">
+  <h2 class="title">Миний хөөрхөн хайр</h2>
+  <p class="sub">Зарим хүмүүс амьдралд зүгээр нэг орж ирдэггүй. Амьдралд минь өнгө нэмж байдагт баярлалаа хайраа.</p>
+  <div class="photos">
+    <div class="photo"><img src="photo1.jpg" alt="Бидний дурсамж"></div>
+    <div class="photo"><img src="photo2.jpg" alt="Бидний дурсамж"></div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap days">
+  <div class="label">хамт өнгөрүүлсэн</div>
+  <div class="number">508</div>
+  <div class="label">хоног ♡</div>
+  <p class="sub" style="margin-top:35px">508 гэдэг зүгээр нэг тоо биш.<br>Инээсэн, муудалцсан, санасан, хамт байсан 508 дахь өдөр чиний минь төрсөн өдөр билээ.</p>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <h2 class="title">Чамд</h2>
+  <div class="card poem">
+    Чи миний өдрийн хамгийн гоё хэсэг,<br>
+    Чимээгүй үед минь бодогдох аялгуу.<br><br>
+    Цаг хугацаа хурдан өнгөрсөн ч<br>
+    Чамтай өнгөрүүлсэн мөч бүр<br>
+    надад удаан санагддаг.<br><br>
+    Өнөөдөр чиний төрсөн өдөр.<br>
+    Харин миний хүсдэг зүйл ганцхан зүйл бол —<br>
+    чамайгаа аз жаргалтай байхыг харах шүү.
+  </div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <h2 class="title">Бидний жижигхэн хөгжилтэй асуулт</h2>
+  <p class="sub">Доорх дээр дараад үзээрэй.</p>
+  <div class="funny-grid">
+    <div class="funny" onclick="show(this)">Хэн нь илүү зөрүүд вэ?<div class="answer">Мэдээж чи биш ээ... 😌 (гэхдээ хоёулаа байж магадгүй)</div></div>
+    <div class="funny" onclick="show(this)">Хэн нь түрүүлж санадаг вэ?<div class="answer">Би гэж хэлмээр байна. Гэхдээ чи уншиж байгаа болохоор зөв хариулт нь: ЧИ. 😂</div></div>
+    <div class="funny" onclick="show(this)">508 хоногийн дараа бид ?<div class="answer">Дахиад 508. Тэгээд дахиад 508. 🤍</div></div>
+  </div>
+</div>
+</section>
+
+<section class="final">
+<div class="wrap">
+  <div class="heart">♡</div>
+  <h2>Happy Birthday,<br>Булгантамир</h2>
+  <p>
+    Чамд энэ жижигхэн сайтыг хийсэн шалтгаан нь
+    үнэтэй бэлэгнээс илүү, өөрийн гараар бүтээсэн
+    дурсамж үлдээхийг хүссэн юм.<br><br>
+    Төрсөн өдрийн мэнд хүргэе.<br>
+    Чамдаа хайртай. ♡
+  </p>
+</div>
+</section>
+
+<div class="footer">508 days • made with love ♡</div>
+
+<script>
+const song=document.getElementById('song');
+const btn=document.getElementById('musicText');
+function startExperience(){
+  document.getElementById('story').scrollIntoView({behavior:'smooth'});
+  song.play().then(()=>btn.textContent='PAUSE').catch(()=>{});
+}
+function toggleMusic(){
+  if(song.paused){
+    song.play().then(()=>btn.textContent='PAUSE').catch(()=>alert('Дууны файл олдсонгүй.'));
+  }else{song.pause();btn.textContent='PLAY';}
+}
+function show(el){
+  const a=el.querySelector('.answer');
+  a.style.display=a.style.display==='block'?'none':'block';
+}
+</script>
+</body>
+</html>
